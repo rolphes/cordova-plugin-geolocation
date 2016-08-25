@@ -105,6 +105,12 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
             <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten.</string>
         </config-file>
+        
+        <config-file target="*-Info.plist" parent="UIBackgroundModes">
+          <array>
+            <string>location</string>
+          </array>
+        </config-file>
 
     </platform>
 

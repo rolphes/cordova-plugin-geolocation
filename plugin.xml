@@ -98,8 +98,12 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <source-file src="src/ios/CDVLocation.m" />
         <framework src="CoreLocation.framework" />
 
+        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+            <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten.</string>
+        </config-file>
+
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
-            <string>[App Name] benötigt zum Tracken der Position den Zugriff auf die Standortdaten.</string>
+            <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten.</string>
         </config-file>
 
     </platform>

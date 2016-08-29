@@ -66,6 +66,7 @@
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9) {
      self.locationManager.allowsBackgroundLocationUpdates = YES;
     }
+    self.locationManager.pausesLocationUpdatesAutomatically = NO;
 }
 
 - (BOOL)isAuthorized

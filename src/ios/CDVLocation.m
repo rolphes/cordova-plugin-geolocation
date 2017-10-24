@@ -80,7 +80,7 @@
             return (authStatus == kCLAuthorizationStatusAuthorizedWhenInUse) || (authStatus == kCLAuthorizationStatusAuthorizedAlways) || (authStatus == kCLAuthorizationStatusNotDetermined);
         }
 #endif
-        return (authStatus == kCLAuthorizationStatusAuthorized) || (authStatus == kCLAuthorizationStatusNotDetermined);
+        return (authStatus == kCLAuthorizationStatusAuthorizedAlways) || (authStatus == kCLAuthorizationStatusNotDetermined);
     }
 
     // by default, assume YES (for iOS < 4.2)
@@ -94,8 +94,6 @@
 
     if (locationServicesEnabledClassPropertyAvailable) { // iOS 4.x
         return [CLLocationManager locationServicesEnabled];
-    } else if (locationServicesEnabledInstancePropertyAvailable) { // iOS 2.x, iOS 3.x
-        return [(id)self.locationManager locationServicesEnabled];
     } else {
         return NO;
     }

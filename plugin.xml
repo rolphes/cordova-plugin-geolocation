@@ -101,13 +101,16 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <source-file src="src/ios/CDVLocation.m" />
         <framework src="CoreLocation.framework" />
 
-        <preference name="GEOLOCATION_USAGE_DESCRIPTION" default=" " />
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten.</string>
         </config-file>
 
-        <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
-            <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten.</string>
+        <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription"> <!-- deprecated for iOS11 - still in use for iOS <= 10 -->
+            <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten auch im Hintergrundmodus.</string>
+        </config-file>
+		
+		<config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription "> <!-- for iOS 11 -->
+            <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten (Vordergrund- und Hintergrundmodus).</string>
         </config-file>
         
         <config-file target="*-Info.plist" parent="UIBackgroundModes">

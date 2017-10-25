@@ -109,7 +109,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten auch im Hintergrundmodus.</string>
         </config-file>
 		
-		<config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription "> <!-- for iOS 11 -->
+		<config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription"> <!-- for iOS 11 -->
             <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten (Vordergrund- und Hintergrundmodus).</string>
         </config-file>
         

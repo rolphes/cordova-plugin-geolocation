@@ -92,21 +92,22 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <framework src="CoreLocation.framework" />
 
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
-            <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten.</string>
+            <string>Diese App benÃ¶tigt zum Tracken der Position den Zugriff auf die Standortdaten.</string>
         </config-file>
 
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription"> <!-- deprecated for iOS11 - still in use for iOS <= 10 -->
-            <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten auch im Hintergrundmodus.</string>
+            <string>Diese App benÃ¶tigt zum Tracken der Position den Zugriff auf die Standortdaten auch im Hintergrundmodus.</string>
         </config-file>
 		
 		<config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription"> <!-- for iOS 11 -->
-            <string>Diese App benötigt zum Tracken der Position den Zugriff auf die Standortdaten (Vordergrund- und Hintergrundmodus).</string>
+            <string>Diese App benÃ¶tigt zum Tracken der Position den Zugriff auf die Standortdaten (Vordergrund- und Hintergrundmodus).</string>
         </config-file>
         
         <config-file target="*-Info.plist" parent="UIBackgroundModes">
           <array>
             <string>location</string>
           </array>
+		</config-file>
     </platform>
 
     <!-- windows universal apps (Windows 8.1, Windows Phone 8.1, Windows 8.0) -->
